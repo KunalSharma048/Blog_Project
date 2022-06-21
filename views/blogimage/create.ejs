@@ -1,0 +1,31 @@
+<%- include('../partition/header.ejs') %>
+
+<section class="login-wrap mtb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-box">
+                    <h1 class="alert alert-success text-center">Add New IMage</h1>
+                    <form action="/blogimage/insert" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="text" name="title" class="form-control" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="description" class="form-control" placeholder="Description">
+                        </div>
+                        <div class="form-group">
+                            <input type="file" name="image" class="form-control" placeholder="Image">
+                        </div>
+                        
+                        <div class="form-group">
+                            <button class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>         
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%- include('../partition/footer.ejs') %>

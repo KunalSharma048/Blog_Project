@@ -1,0 +1,64 @@
+<%-include('./partition/header.ejs') %>
+    <section class="blog-detail mtb-40">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-8">
+    				<div class="blog-left">
+                        <h1><%=data.title %></h1>
+                        <div class="posted-on">
+                            <p><%=data.createdAt %></p>
+                        </div>
+                        <div class="detail-img">
+    					   <img style="    height: 500px;
+                           width: 650px;" src="/blogimage/<%= data.image %>" alt="blog1" />
+                        </div>
+                        <div class="blog-desc">
+        					<p style="    text-align: justify;
+                            margin-right: 65px;
+                            letter-spacing: 0.5;"><%=data.description %> </p>
+                           
+                        </div>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="blog-right">
+                        <div class="right-widget recent-post">
+                            <h3>Recent Blogs</h3>
+                            <% recentblogs.forEach((item)=>{ %>
+                            <a href="/detail/<%=item._id %>">
+                               
+                                <div class="rb-box">
+                                    <div class="rb-box-img">
+                                        <img src="/blogimage/<%= item.image %>" alt="blog1" />
+                                    </div>
+                                    <div class="rb-box-desc">
+                               
+                                        <h4><%=item.title %></h4>
+                                        <p>Posted On: <%= item.createdAt %></p>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </a>
+                            <%}) %>
+                           
+                            
+                            
+                            
+                        </div>
+                         <div class="right-widget categories">
+                             <h3>Categories</h3>
+                             <ul>
+                                <% category.forEach((item)=>{ %> 
+                                <li><a href="#"><%= item.title %></a></li>
+                                <% }) %>
+                                
+                            </ul>
+                         </div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <%-include('./partition/footer.ejs')%>

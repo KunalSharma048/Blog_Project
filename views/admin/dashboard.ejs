@@ -1,0 +1,28 @@
+<%- include('../partition/header.ejs') %>
+
+<section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="dash-left">
+                        <ul>
+                            <li class="active"><a href="/dashboard" class="active">Dashboard</a></li>
+                            <li><a href="/blogimage/display">Blogs</a></li>
+                            <li><a href="/category/display">Categories</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </div>   
+                </div>
+                <div class="col-md-9">
+                    <div class="dash-right">
+                        <h1>Hello <%= data.username %></h1>
+                        <p>Welcome to the Blogs Admin Panel.You can now upload your blogs and you can perform all the operation like update delete and insert from here here. </p>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('../partition/footer.ejs') %>

@@ -1,0 +1,43 @@
+<%- include('../partition/header.ejs') %>
+<section class="login-wrap mtb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-box">
+                    <h1 class="alert alert-success text-center">Display </h1>
+                    <table class="table">
+                        <thead>
+                            
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Fees</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <% var i=1 %>   
+                            <% data.forEach((item)=>{ %>
+   
+                            
+                               <tr>
+                                   <td><%= i++ %></td>
+                                   <td><%= item.name %></td>
+                                   <td><%= item.age %></td>
+                                   <td><%= item.fees %></td>
+                                   <td>
+                                       <a href="/student/view/<%=item._id %>">view </a>
+                                       <a href="/student/edit/<%=item._id %>">Edit </a>
+                                       <a href="/student/delete/<%=item._id%>">delete </a>
+                                   </td>
+                               </tr>
+                             <%})%>
+                        </tbody>
+                      </table>
+                </div>         
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('../partition/footer.ejs') %>
