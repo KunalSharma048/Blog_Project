@@ -1,5 +1,26 @@
 <%-include('./partition/header.ejs') %>
 
-
+<section class="featured-blog mtb-40">
+    <div class="container">
+        
+        <div class="row">
+            <% data.forEach((item)=>{ %>
+            
+            <div class="col-md-4">
+                <div class="blog-box">
+                    <img src="/blogimage/<%= item.image %> " alt="blog1" />
+                    <h3><%=item.title %></h3>
+                    <p><%= moment(item.createdAt).format('MMMM Do YYYY,h:mm a') %></p>
+                    <p><%=item.description.substring(0,100) %>....</p>
+                
+                
+                    <a href="/detail/<%=item._id %>" class="btn btn-danger">Read more...</a>
+                </div>
+            </div>
+            <%}) %>
+        </div>
+        
+    </div>
+</section>
 
 <%-include('./partition/footer.ejs')%>

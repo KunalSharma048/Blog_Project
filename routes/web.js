@@ -59,11 +59,11 @@ router.post('/contactinsert',contactController.contactinsert);
 //BLOGIMAGE
 router.get('/blogimage/create',blogImageController.createimage)
 router.post('/blogimage/insert',blogImageController.blogimageinsert);
-router.get('/blogimage/display',blogImageController.displayimage);
-router.get('/blogimage/view/:id',blogImageController.viewblog);
-router.get('/blogimage/edit/:id',blogImageController.editblog);
+router.get('/blogimage/display',auth,blogImageController.displayimage);
+router.get('/blogimage/view/:id',auth,blogImageController.viewblog);
+router.get('/blogimage/edit/:id',auth,blogImageController.editblog);
 router.post('/blogimage/update/:id',upload,blogImageController.updateblog);
-router.get('/blogimage/delete/:id',blogImageController.deleteblog);
+router.get('/blogimage/delete/:id',auth,blogImageController.deleteblog);
 //USERCONTROLLER
 router.get('/user/create',usercontroller.create);
 router.post('/user/insert',usercontroller.insertuser);

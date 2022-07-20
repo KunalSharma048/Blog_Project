@@ -6,7 +6,7 @@
     				<div class="blog-left">
                         <h1><%=data.title %></h1>
                         <div class="posted-on">
-                            <p><%=data.createdAt %></p>
+                            <p><%= moment(data.createdAt).format('MMMM Do YYYY,h:mm a') %></p>
                         </div>
                         <div class="detail-img">
     					   <img style="    height: 500px;

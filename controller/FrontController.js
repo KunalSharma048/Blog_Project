@@ -5,6 +5,7 @@ const home=async(req,res)=>{
     res.render('home',{data:data})
 }
 const about=(req,res)=>{
+
     res.render('about')
 }
 const detail=async(req,res)=>{
@@ -20,8 +21,9 @@ const detail=async(req,res)=>{
 const contact=(req,res)=>{
     res.render('contact')
 }
-const blog=(req,res)=>{
-    res.render('blog')
+const blog=async(req,res)=>{
+    const data=await BlogImageModel.find();
+    res.render('blog',{data:data})
 }
 const login=(req,res)=>{
     res.render('login',{message:req.flash('error')})
