@@ -8,7 +8,7 @@
             
             <div class="col-md-4">
                 <div class="blog-box">
-                    <img src="/blogimage/<%= item.image %> " alt="blog1" />
+                    <img src="/blogimage/<%= item.image %> " alt="blog1"style="width: 300px;height:200px;border-radius:10px;" />
                     <h3><%=item.title %></h3>
                     <p><%= moment(item.createdAt).format('MMMM Do YYYY,h:mm a') %></p>
                     <p><%=item.description.substring(0,100) %>....</p>
@@ -22,5 +22,10 @@
         
     </div>
 </section>
+<br>
+<br>
+<br>
+
+
 
 <%-include('./partition/footer.ejs')%>

@@ -29,7 +29,7 @@ app.use(flash());
 //STATIC FILES CSS IMAGE JS LOAD
 app.use(express.static('public'))
 //ROUTE LOAD
-app.use('/about',underconstruction)
+// app.use('/about',underconstruction)
 app.use('/blogimage/insert',upload)
 const web= require('./routes/web.js');
 
