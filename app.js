@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000;
 //flash messages
 var session = require('express-session')
 var flash = require('connect-flash');
