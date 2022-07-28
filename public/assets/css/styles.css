@@ -60,3 +60,10 @@ footer {background-color: #000;color:#fff; padding:20px;}
 @media (max-width: 767px) {
 	.intro-text {display: none;}
 }
+@media (max-width:800px){
+	.detail-img{
+		width: 350px;
+		height: 360px;
+		border-radius: 10px;
+	}
+}
